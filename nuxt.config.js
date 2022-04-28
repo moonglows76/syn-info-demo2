@@ -49,5 +49,21 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/info/page/:p',
+        component: resolve(__dirname, 'pages/info/index.vue'),
+        name: 'information list page',
+      })
+      // routes.push({
+      //   path: '/info/archives/:yearMonth/page/:p',
+      //   component: resolve(__dirname, 'pages/info/archives/_yearMonth.vue'),
+      //   name: 'information month archive list page',
+      // })
+    },
+  },
+
 }
