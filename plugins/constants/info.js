@@ -1,0 +1,6 @@
+export default {
+  'LIST_LIMIT': 5,
+  'MAINTENANCE_LIST_LIMIT': 5,
+  'TROUBLE_LIST_LIMIT': 5,
+  'MONTH_LIST_LIMIT': 100,
+}
