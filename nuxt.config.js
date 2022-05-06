@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'synapse-info-demo2',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
