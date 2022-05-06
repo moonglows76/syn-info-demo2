@@ -1,4 +1,5 @@
 export default {
+  'TOP_LIST_LIMIT': 20,
   'TOP_IMPORTANT_LIST_LIMIT': 3,
   'TOP_RECRUIT_LIST_LIMIT': 3,
   'TOP_INFO_LIST_LIMIT': 5,
