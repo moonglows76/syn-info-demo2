@@ -29,19 +29,19 @@ export default {
         offset: (page - 1) * limit
       },
     })
-    const monthContents = await $microcms.get({
-      endpoint: 'info',
-      queries: {
-        fields: 'publishedAt',
-        limit: $constants.info.MONTH_LIST_LIMIT,
-      },
-    })
+    // const monthContents = await $microcms.get({
+    //   endpoint: 'info',
+    //   queries: {
+    //     fields: 'publishedAt',
+    //     limit: $constants.info.MONTH_LIST_LIMIT,
+    //   },
+    // })
     return {
       contents,
       pager: [...Array(Math.ceil(totalCount / limit)).keys()],
       page,
       path,
-      monthContents: monthContents.contents,
+      // monthContents: monthContents.contents,
     }
   }
 }
