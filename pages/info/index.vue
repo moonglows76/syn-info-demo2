@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <p><NuxtLink to="/">トップページ</NuxtLink></p>
+    <Breadcrumb :breadcrumbs="breadcrumbs" />
     <h1>お知らせ</h1>
     <InformationList :contents="contents" />
     <Pagination
@@ -42,6 +42,14 @@ export default {
       page,
       path,
       // monthContents: monthContents.contents,
+    }
+  },
+  data({ $config, $route }) {
+    return {
+      breadcrumbs: [
+        { title: "トップページ", link: "/" },
+        { title: "お知らせ", link: "current" }, // 現在地にはlinkにcurrentを入れる
+      ],
     }
   }
 }
