@@ -1,0 +1,60 @@
+/* layout */
+
+/*doc
+---
+title: page-wrapper
+name: page-wrapper
+category: layout
+---
+*/
+.page-wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  @include for-pc {
+    background-color: $blue-thin;
+  }
+}
+
+
+/*doc
+---
+title: contents
+name: contents
+category: layout
+---
+*/
+.contents {
+  @include for-sp {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 50px;
+  }
+  @include for-pc {
+    box-sizing: border-box;
+    max-width: 1000px;
+    width: 100%;
+    margin: 30px auto 0;
+    padding: 50px 49px 100px;
+    border: 1px solid #BEBEBE;
+    background-color: #fff;
+  }
+}
+
+
+/*doc
+---
+title: content-body
+name: content-body
+category: layout
+---
+*/
+.content-body {
+  &__indent {
+    @include for-pc {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
