@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <Breadcrumb :breadcrumbs="breadcrumbs" />
     <h1>お知らせ</h1>
     <InformationList :contents="contents" />
@@ -44,13 +44,16 @@ export default {
       // monthContents: monthContents.contents,
     }
   },
-  data({ $config, $route }) {
+  data() {
     return {
       breadcrumbs: [
         { title: "トップページ", link: "/" },
         { title: "お知らせ", link: "current" }, // 現在地にはlinkにcurrentを入れる
       ],
     }
-  }
+  },
 }
 </script>
+<style lang="scss" scoped>
+@import "~/assets/sass/info/style.scss";
+</style>
