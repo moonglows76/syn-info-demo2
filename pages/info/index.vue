@@ -1,13 +1,15 @@
 <template>
   <div class="content-container">
     <Breadcrumb :breadcrumbs="breadcrumbs" />
-    <h1>お知らせ</h1>
-    <InformationList :contents="contents" />
-    <Pagination
-      :pager="pager"
-      :current="Number(page)"
-      :path="path"
-    />
+    <section class="info-top">
+      <h1 class="info-top__title">お知らせ</h1>
+      <InformationList :contents="contents" />
+      <Pagination
+        :pager="pager"
+        :current="Number(page)"
+        :path="path"
+      />
+    </section>
   </div>
 </template>
 
