@@ -3,13 +3,15 @@
     <Breadcrumb :breadcrumbs="breadcrumbs" />
     <article class="info-detail">
       <h1 class="info-detail__title">{{ title }}</h1>
-      <div class="info-detail__category">
-        <span :class="categoryClass">{{ categoryText }}</span>
-      </div>
-      <div class="info-detail__datetime">
-        <time :datetime="$dayjs(publishedAt).format('YYYY-MM-DD')">
-          {{ $dayjs(publishedAt).format('YYYY年M月D日') }}
-        </time>
+      <div class="info-detail__category-datetime">
+        <div class="info-detail__category">
+          <span :class="categoryClass">{{ categoryText }}</span>
+        </div>
+        <div class="info-detail__datetime">
+          <time :datetime="$dayjs(publishedAt).format('YYYY-MM-DD')">
+            {{ $dayjs(publishedAt).format('YYYY年M月D日') }}
+          </time>
+        </div>
       </div>
       <div
         class="info-detail__content"
@@ -76,10 +78,12 @@
         v-if="support"
         class="info-detail__support"
       >
-        お問い合わせ先<br>
-        <strong>シナプスサポートセンター</strong><br>
-        電話：099-813-8699（受付時間　9：00 - 21：00 年中無休）<br>
-        メール：<a href="mailto:support@synapse.jp">support@synapse.jp</a>
+        <div class="info-detail__support-inner">
+          お問い合わせ先<br>
+          <strong>シナプスサポートセンター</strong><br>
+          電話：099-813-8699（受付時間　9：00 - 21：00 年中無休）<br>
+          メール：<a href="mailto:support@synapse.jp">support@synapse.jp</a>
+        </div>
       </div>
     </article>
   </div>

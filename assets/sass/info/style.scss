@@ -1,0 +1,128 @@
+@mixin title {
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  border-top: 1px dashed #999999;
+  border-bottom: 1px dashed #999999;
+  color: #ff8000;
+  font-size: 1.5em;
+  @include for-pc {
+    font-size: 2em;
+    color: #ff8000;
+  }
+}
+
+.info-top {
+  &__title {
+    @include title;
+  }
+}
+
+.info-detail {
+  &__title {
+    @include title;
+  }
+  &__category-datetime {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__category {
+    margin-right: 20px;
+    span {
+      border-radius: 2px;
+      border: 1px solid currentColor;
+      padding: 5px;
+    }
+    &-normal {
+    }
+    &-important {
+      color: $red;
+    }
+    &-recruit {
+      color: $blue;
+    }
+  }
+  &__datetime {
+    color: gray;
+  }
+  &__content {
+    // font-size: 18px;
+  }
+  &__heading-l {
+    font-size: 1.3em;
+    border: 1px solid #a9a9a9;
+    border-left-width: 5px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding: 10px;
+  }
+  &__heading-m {
+    font-size: 1.1em;
+    border-left: 5px solid #a9a9a9;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    padding-left: 10px;
+  }
+  &__heading-s {
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+  &__paragraph {
+    line-height: 1.8;
+    ::v-deep {
+      p {
+        margin: 1em 0;
+      }
+      ul, ol {
+        margin: 1em 0;
+        ul, ol {
+          margin: 0.5em 0;
+        }
+      }
+      li {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+  &__list {
+    li {
+      margin-bottom: 1em;
+    }
+  }
+  &__table {
+    ::v-deep {
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 1em 0;
+      }
+      th, td {
+        padding: 10px 15px;
+        background: #ffffff;
+        border: 1px #999999 solid;
+        text-align: left;
+      }
+      th {
+        background-color: #ffffcc;
+      }
+      p:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__support {
+    display: flex;
+    justify-content: center;
+    &-inner {
+      text-align: center;
+      margin: 2em 0 0;
+      padding: 15px 20px;
+      border: 1px solid #BDDEFF;
+      background-color: #EEF7FF;
+    }
+  }
+}
