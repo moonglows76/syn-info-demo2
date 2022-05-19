@@ -24,7 +24,7 @@
         </span>
         <span class="information-list__title">
           {{ content.title }}
-          <i class="fa-solid fa-up-right-from-square"></i>
+          <i class="information-list__icon fa-solid fa-up-right-from-square" title="ウインドウが開きます"></i>
         </span>
       </a>
       <NuxtLink
@@ -111,6 +111,10 @@ export default {
   }
   &__title {
     flex-grow: 1;
+  }
+  &__icon {
+    margin-left: 10px;
+    vertical-align: 1px;
   }
 }
 </style>
