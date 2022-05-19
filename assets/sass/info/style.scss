@@ -28,7 +28,7 @@
   &__category {
     margin-right: 20px;
     span {
-      border-radius: 2px;
+      border-radius: var(--border-radius);
       border: 1px solid currentColor;
       padding: 5px;
     }

@@ -94,7 +94,7 @@ export default {
     flex-shrink: 0;
   }
   &__category {
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     border: 1px solid currentColor;
     padding: 3px 5px;
     line-height: 1;
