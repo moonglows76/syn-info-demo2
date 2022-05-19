@@ -1,17 +1,29 @@
 <template>
   <div>
-    <template v-if="importantContents.length > 0">
-      <h2>重要なお知らせ</h2>
-      <InformationList :contents="importantContents" />
-    </template>
-    <template v-if="recruitContents.length > 0">
-      <h2>採用</h2>
-      <InformationList :contents="recruitContents" />
-    </template>
-    <h2>シナプスからのお知らせ</h2>
-    <p><b>通常</b></p>
-    <InformationList :contents="normalContents" />
-    <NuxtLink to="/info">お知らせ一覧へ</NuxtLink>
+    <section class="top-info">
+      <template v-if="importantContents.length > 0">
+        <div class="top-info__category top-info__category--important">
+          <h2 class="top-info__heading">重要なお知らせ</h2>
+          <InformationList :contents="importantContents" />
+        </div>
+      </template>
+      <template v-if="recruitContents.length > 0">
+        <div class="top-info__category top-info__category--recruit">
+          <h2 class="top-info__heading">採用</h2>
+          <InformationList :contents="recruitContents" />
+        </div>
+      </template>
+      <div class="top-info__category top-info__category--normal">
+        <h2 class="top-info__heading">シナプスからのお知らせ</h2>
+        <InformationList :contents="normalContents" />
+        <div class="top-info__btn-container">
+          <NuxtLink to="/info" class="top-info__btn">
+            お知らせ一覧へ
+            <i class="fa-solid fa-angle-right top-info__btn-icon" />
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -54,3 +66,6 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+@import "~/assets/sass/top/style.scss";
+</style>
