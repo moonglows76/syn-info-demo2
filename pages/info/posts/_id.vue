@@ -115,17 +115,15 @@ export default {
     })
     return data
   },
-  data() {
-    return {
-      // 現在地のテキストがasyncDataから取得できない…
-      breadcrumbs: [
+  computed: {
+    // パンくずナビの表示データ
+    breadcrumbs(){
+      return [
         { title: "トップページ", link: "/" },
         { title: "お知らせ", link: "/info" },
-        { title: "", link: "current" }, // 現在地にはlinkにcurrentを入れる
-      ],
-    }
-  },
-  computed: {
+        { title: this.title, link: "current" }, // 現在地にはlinkにcurrentを入れる
+      ]
+    },
     // カテゴリごとの表記を返す
     categoryText() {
       // plugins内の定数から名称を取得
