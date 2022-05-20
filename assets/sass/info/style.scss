@@ -74,7 +74,7 @@
     line-height: 1.8;
     ::v-deep {
       p {
-        margin: 1em 0;
+        margin: 0;
       }
       ul, ol {
         margin: 1em 0;
@@ -120,10 +120,16 @@
     &-inner {
       text-align: center;
       margin: 2em 0 0;
-      padding: 15px 20px;
+      padding: 20px 30px;
       border: 1px solid #BDDEFF;
       background-color: #EEF7FF;
     }
+    ::v-deep {
+      p {
+        margin: 0;
+      }
+    }
+  }
   &__nav-bottom {
     margin-top: 40px;
     display: flex;
