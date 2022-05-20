@@ -97,6 +97,22 @@
           </div>
         </div>
       </div>
+      <div class="info-detail__nav-bottom">
+        <NuxtLink
+          to="/info"
+          class="info-detail__nav-bottom-item"
+        >
+          <i class="fa-solid fa-angle-left info-detail__nav-bottom-icon" />
+          お知らせへ戻る
+        </NuxtLink>
+        <NuxtLink
+          to="/"
+          class="info-detail__nav-bottom-item"
+        >
+          <i class="fa-solid fa-angle-left info-detail__nav-bottom-icon" />
+          トップページへ戻る
+        </NuxtLink>
+      </div>
     </article>
   </div>
 </template>

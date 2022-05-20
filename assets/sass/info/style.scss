@@ -124,5 +124,18 @@
       border: 1px solid #BDDEFF;
       background-color: #EEF7FF;
     }
+  &__nav-bottom {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    @include for-pc {
+      margin-bottom: -50px;
+    }
+    &-item {
+      margin-top: 10px;
+    }
+    &-icon {
+      margin-right: 10px;
+    }
   }
 }
