@@ -72,17 +72,29 @@
               class="info-detail__table"
             />
           </template>
+          <!-- custom_support -->
+          <template v-if="body_content.fieldId === 'custom_support'">
+            <div
+              :key="`body_content_${index}`"
+              class="info-detail__support"
+            >
+              <div
+                class="info-detail__support-inner"
+                v-html="body_content.text"
+              />
+            </div>
+          </template>
         </template>
-      </div>
-      <div
-        v-if="support"
-        class="info-detail__support"
-      >
-        <div class="info-detail__support-inner">
-          お問い合わせ先<br>
-          <strong>シナプスサポートセンター</strong><br>
-          電話：099-813-8699（受付時間　9：00 - 21：00 年中無休）<br>
-          メール：<a href="mailto:support@synapse.jp">support@synapse.jp</a>
+        <div
+          v-if="support"
+          class="info-detail__support"
+        >
+          <div class="info-detail__support-inner">
+            ＜お問い合わせ先＞<br>
+            <strong>シナプスサポートセンター</strong><br>
+            電話：099-813-8699（受付時間　9：00 - 21：00 年中無休）<br>
+            メール：<a href="mailto:support@synapse.jp">support@synapse.jp</a>
+          </div>
         </div>
       </div>
     </article>
