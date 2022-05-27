@@ -61,8 +61,9 @@ export default {
   list-style-type: none;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   &__item {
-    margin: 0 5px;
+    margin: 5px;
     &.active {
       #{$self}__link {
         background: $gray;
@@ -71,7 +72,7 @@ export default {
     }
     &--prev,
     &--next {
-      margin: 0;
+      margin: 5px 0;
       min-width: 32px;
       #{$self}__link {
         border: none;
