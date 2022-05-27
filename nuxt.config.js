@@ -12,6 +12,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'viewport-fit=cover, width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#ffffff' },
+      { name: 'robots', content: 'noindex, nofollow' },
       // { name: 'google-site-verification', content: '' },
       // { name: 'msvalidate.01', content: '' },
       { property: 'og:locale', content: 'ja_JP' },
