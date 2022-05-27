@@ -42,3 +42,37 @@
     }
   }
 }
+
+.top-kagomaga {
+  margin-top: 50px;
+  &__heading {
+    font-size: 1.3em;
+    border: 1px solid #a9a9a9;
+    border-left-width: 5px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    margin-top: 1em;
+    margin-bottom: 0;
+    padding: 10px;
+  }
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid lightgray;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: $font-color--base;
+    transition: background-color var(--timing) var(--duration);
+    &:hover {
+      background-color: $blue-thin;
+    }
+  }
+}
